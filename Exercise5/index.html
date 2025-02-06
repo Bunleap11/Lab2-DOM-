@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task List</title>
+    <style>
+        .container {
+            max-width: 500px;
+            margin: 20px auto;
+        }
+
+        .input-group {
+            margin-bottom: 10px;
+        }
+
+        .task {
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 8px;
+            color: white;
+        }
+
+        .low {
+            background-color: gray;
+        }
+
+        .high {
+            background-color: red;
+        }
+
+        button {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="input-group">
+            <label for="taskDesc">Task:</label>
+            <input type="text" id="taskDesc" placeholder="Task description">
+        </div>
+
+        <div class="input-group">
+            <label for="taskPriority">Priority:</label>
+            <select id="taskPriority">
+                <option value="0">Low</option>
+                <option value="1">High</option>
+            </select>
+        </div>
+
+        <button id="addTask">Add task</button>
+
+        <div class="buttons">
+            <button id="showImportant">Show only the important tasks</button>
+            <button id="showNotImportant">Show the tasks that are not important</button>
+            <button id="showAll">Show all the tasks</button>
+        </div>
+
+        <ul class="task-list" id="task-list"></ul>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
